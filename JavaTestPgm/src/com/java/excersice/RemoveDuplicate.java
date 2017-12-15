@@ -16,7 +16,7 @@ public class RemoveDuplicate {
 
     public static void main(String[] args) {
         String str = "abaacddebbcc";
-        String ourString = "";
+        
         char[] ch = str.toCharArray();
         
          Set<Character> charSet = new LinkedHashSet<Character>();
@@ -24,6 +24,7 @@ public class RemoveDuplicate {
          {
              charSet.add(c);
          }
+         System.out.println("Char Set "+charSet);
          StringBuilder sb=new StringBuilder();
          for(Character character:charSet)
          {

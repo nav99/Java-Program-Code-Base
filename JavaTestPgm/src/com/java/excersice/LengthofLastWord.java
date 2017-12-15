@@ -11,7 +11,7 @@ package com.java.excersice;
  */
 public class LengthofLastWord {
     public static void main(String[] args) {
-        String str="Hell world India Delhi navneetgaur bangalore";
+        String str="Hell world India Delhi navneetgaur bangalore abcd";
         System.out.println(leanthOfLastWord(str));
     }
 

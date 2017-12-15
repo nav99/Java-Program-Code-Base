@@ -5,27 +5,30 @@
  */
 package com.java.excersice;
 
+import com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Scanner;
 
 /**
  *
  * @author Mahadev
  */
-public class LargestNum {
+public class HIghestNumber {
+
     public static void main(String[] args) {
-        ArrayList<Integer> al=new ArrayList<Integer>();
-        al.add(4);
+        ArrayList<Integer> al=new ArrayList<>();
         al.add(34);
-        al.add(9);
-        al.add(87);
-        al.add(2);
-        System.out.println(largestNum(al));
+        al.add(5);
+        al.add(88);
+        al.add(55);
+        al.add(99);
+        System.out.println(" Largest no is "+largestNo(al));
     }
 
-    private static String largestNum(final ArrayList<Integer> al) {
-        StringBuilder output=new StringBuilder();
+    private static String largestNo(final ArrayList<Integer> al) {
+        StringBuilder sb=new StringBuilder();;
         Collections.sort(al, new Comparator<Integer>() {
 
             @Override
@@ -33,15 +36,18 @@ public class LargestNum {
                 return (String.valueOf(o2)+String.valueOf(o1)).compareTo(String.valueOf(o1)+String.valueOf(o2));
             }
         });
-       
-        System.out.println("Al is "+al);
+        
+        System.out.println("Arraylist is "+al);
         
         for(int i=0;i<al.size();i++)
         {
-            output.append(al.get(i));
+            sb.append(al.get(i));
         }
         
-        return output.toString();
+        
+        return sb.toString();
+        
+        
     }
     
 }
